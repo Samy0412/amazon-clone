@@ -13,6 +13,7 @@ function Home() {
         />
         <div className="home__row">
           <Product
+            key="12321345"
             id="12321345"
             title="American Dirt (Oprah's Book Club): A Novel Paperback – Jan. 21 2020"
             price={19.99}
@@ -22,6 +23,7 @@ function Home() {
             rating={5}
           />
           <Product
+            key="495069378"
             id="495069378"
             title="Crock-Pot 6Qt Programmable Slow Cooker, Stainless Steel, Black - SCVP600SS-033"
             price={64.97}
@@ -33,6 +35,7 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
+            key="499599960"
             id="499599960"
             title=" TETON Sports LEEF Lightweight Mummy Sleeping Bag; Great for Hiking, Backpacking and Camping; Free Compression Sack"
             price={119.99}
@@ -42,6 +45,7 @@ function Home() {
             rating={4}
           />
           <Product
+            key="127483720"
             id="127483720"
             title="Echo Dot (3rd gen) - Smart speaker with Alexa - Charcoal"
             price={39.27}
@@ -51,6 +55,7 @@ function Home() {
             rating={4}
           />
           <Product
+            key="457283909"
             id="457283909"
             title="Logitech K360 Wireless Keyboard, Black, English (920-004088)"
             price={34.99}
@@ -62,6 +67,7 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
+            key="56273891"
             id="56273891"
             title="Acer R240HY bidx 23.8-Inch IPS HDMI DVI VGA (1920 x 1080) Widescreen Display"
             price={194.99}
