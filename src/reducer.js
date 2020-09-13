@@ -8,7 +8,8 @@ export const getTotal = (array) => {
 };
 
 const reducer = (state, action) => {
-  console.log(action);
+  console.log("action", action);
+  console.log("basket", state.basket);
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
