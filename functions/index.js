@@ -17,11 +17,11 @@ app.use(express.json());
 //- API routes
 app.get("/", (request, response) => response.status(200).send("hello world"));
 
-app.post("/payment/create", async (request, response) => {
+app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
   console.log("Payment Request received BOOM! for this amount >>>>", total);
 
-  const paymentIntent = await stripe.paymentintents.create({
+  const paymentIntent = await stripe.paymentIntents.create({
     amount: total, //subunits of the currency
     currency: "usd",
   });

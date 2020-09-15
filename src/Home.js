@@ -16,7 +16,7 @@ function Home() {
             key="12321345"
             id="12321345"
             title="American Dirt (Oprah's Book Club): A Novel Paperback – Jan. 21 2020"
-            price={19.99}
+            price={19.37}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/51Cj8es7jmL._SX329_BO1,204,203,200_.jpg"
             }
@@ -38,7 +38,7 @@ function Home() {
             key="499599960"
             id="499599960"
             title=" TETON Sports LEEF Lightweight Mummy Sleeping Bag; Great for Hiking, Backpacking and Camping; Free Compression Sack"
-            price={119.99}
+            price={119.95}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/71QnaY-SYOL._AC_SL1500_.jpg"
             }
@@ -48,7 +48,7 @@ function Home() {
             key="127483720"
             id="127483720"
             title="Echo Dot (3rd gen) - Smart speaker with Alexa - Charcoal"
-            price={39.27}
+            price={39.0}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/419SVFEiGcL._AC_.jpg"
             }
@@ -58,7 +58,7 @@ function Home() {
             key="457283909"
             id="457283909"
             title="Logitech K360 Wireless Keyboard, Black, English (920-004088)"
-            price={34.99}
+            price={34.95}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/81M0vmC%2BjLL._AC_SL1500_.jpg"
             }
@@ -70,7 +70,7 @@ function Home() {
             key="56273891"
             id="56273891"
             title="Acer R240HY bidx 23.8-Inch IPS HDMI DVI VGA (1920 x 1080) Widescreen Display"
-            price={194.99}
+            price={194.95}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/91K9SyGiyzL._AC_SL1500_.jpg"
             }
