@@ -4,6 +4,8 @@ import Subtotal from "./Subtotal";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import FlipMove from "react-flip-move";
+import CurrencyFormat from "react-currency-format";
+import { getTotal } from "./reducer";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -16,8 +18,11 @@ function Checkout() {
           alt=""
         />
         <div>
-          <h3>Hello, {user ? user.email : "Guest"}</h3>
-          <h2 className="checkout__title">Your shopping Basket</h2>
+          <div className="checkout__header">
+            <h2 className="checkout__title">Shopping Basket</h2>
+            <small>Price</small>
+          </div>
+
           <div style={{ position: "relative" }}>
             <FlipMove enterAnimation="fade" leaveAnimation="fade" typeName="ul">
               {basket.map((item) => (
@@ -27,10 +32,28 @@ function Checkout() {
                   title={item.title}
                   price={item.price}
                   image={item.image}
-                  rating={item.rating}
+                  rating={0}
                 />
               ))}
             </FlipMove>
+          </div>
+          <div className="checkout__subtotal">
+            <CurrencyFormat
+              renderText={(value) => (
+                <>
+                  <p>
+                    Subtotal ({basket.length}{" "}
+                    {basket.length === 1 ? "item" : "items"}):
+                    <strong>{value}</strong>
+                  </p>
+                </>
+              )}
+              decimalScale={2}
+              value={getTotal(basket)}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+            />
           </div>
         </div>
       </div>

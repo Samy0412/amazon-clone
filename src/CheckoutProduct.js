@@ -3,7 +3,7 @@ import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
 const CheckoutProduct = forwardRef(
-  ({ id, image, title, price, rating }, ref) => {
+  ({ id, image, title, price, rating, hideButton, hideStock }, ref) => {
     const [{ basket }, dispatch] = useStateValue();
     const removeFromBasket = () => {
       //Remove the item from the basket
@@ -18,23 +18,22 @@ const CheckoutProduct = forwardRef(
       <div ref={ref} className="checkoutProduct">
         <img className="checkoutProduct__image" src={image} alt="" />
         <div className="checkoutProduct__info">
-          <p className="checkoutProduct__title">{title}</p>
-          <p className="checkoutProduct__price">
-            <small>$</small>
-            <strong>{price}</strong>
-          </p>
-          <div className="checkoutProduct__rating">
-            {Array(rating)
-              .fill()
-              .map(() => (
-                <p>
-                  <span role="img" aria-label="star">
-                    ⭐️
-                  </span>
-                </p>
-              ))}
+          <div className="checkoutProduct__info__header">
+            <div className="checkoutProduct__title">
+              <p>{title}</p>
+              {!hideStock && <small>In stock</small>}
+            </div>
+            <div className="checkoutProduct__price">
+              <p>
+                <small>$</small>
+                <strong>{price}</strong>
+              </p>
+            </div>
           </div>
-          <button onClick={removeFromBasket}>Remove from basket</button>
+
+          {!hideButton && (
+            <button onClick={removeFromBasket}>Remove from basket</button>
+          )}
         </div>
       </div>
     );

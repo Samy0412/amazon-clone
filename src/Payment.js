@@ -92,7 +92,7 @@ function Payment() {
             <h3>Delivery address</h3>
           </div>
           <div className="payment__address">
-            <p>{user?.email}</p>
+            <p>{user?.displayName}</p>
             <p>123 React lane</p>
             <p>Los Angeles, CA</p>
           </div>
@@ -110,6 +110,7 @@ function Payment() {
                 price={item.price}
                 image={item.image}
                 rating={item.rating}
+                hideButton
               />
             ))}
           </div>

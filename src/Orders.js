@@ -7,6 +7,7 @@ import { useStateValue } from "./StateProvider";
 function Orders() {
   const [{ basket, user }, dispatch] = useStateValue();
   const [orders, setOrders] = useState([]);
+  console.log("user is>>>", user);
 
   useEffect(() => {
     if (user) {
@@ -28,7 +29,10 @@ function Orders() {
   }, [user]);
   return (
     <div className="orders">
-      <h3>Your orders</h3>
+      <small className="your__account">Your Account </small>
+      <small>></small>
+      <small className="your__orders"> Your orders</small>
+      <h1>Your orders</h1>
       <div className="orders__order">
         {orders?.map((order) => (
           <Order order={order} />

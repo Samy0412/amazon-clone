@@ -14,14 +14,30 @@
   margin-bottom: 10px;
 }
 
-.checkout__title {
+.checkout__header {
+  display: flex;
+  flex-direction: column;
   margin-right: 10px;
-  font-weight: 700;
-  font-size: 1.2em;
+}
+.checkout__title {
+  font-size: 21px;
   padding: 10px;
+}
+.checkout__header > small {
+  text-align: end;
+  color: #565959 !important;
+  font-size: 13px;
+  font-weight: 600;
   border-bottom: 1px solid lightgray;
 }
 
 .checkout__right {
   padding-left: 20px;
+}
+
+.checkout__subtotal {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  margin-right: 10px;
 }

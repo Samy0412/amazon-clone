@@ -1,0 +1,15 @@
+.orders {
+  padding: 20px 80px;
+  background-color: white;
+}
+
+.orders > h1 {
+  padding-top: 10px;
+}
+
+.your__account {
+  color: rgba(0, 72, 228, 0.87);
+}
+.your__orders {
+  color: #c45500;
+}

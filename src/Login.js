@@ -19,20 +19,6 @@ function Login() {
       .catch((error) => alert(error.message));
   };
 
-  const register = (e) => {
-    e.preventDefault();
-
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((auth) => {
-        // it successfully created a new user with email and password
-        if (auth) {
-          history.push("/");
-        }
-      })
-      .catch((error) => alert(error.message));
-  };
-
   return (
     <div className="login">
       <Link to="/">
@@ -68,7 +54,12 @@ function Login() {
           Sale. Please see our Privacy Notice, our Cookies notice and our
           interest-Based Ads notice.
         </p>
-        <button onClick={register} className="login__registerButton">
+        <br></br>
+        <small>New to Amazon?</small>
+        <button
+          onClick={(e) => history.push("./register")}
+          className="login__registerButton"
+        >
           Create your Amazon Account
         </button>
       </div>

@@ -1,0 +1,49 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+
+.order__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(243, 241, 241);
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+
+.order__info {
+  display: flex;
+  flex-direction: row;
+  flex: 0.7;
+  justify-content: space-between;
+}
+.order__placed > small,
+.order__total > small,
+.order__shipping > small {
+  font-size: 11px;
+  color: #565959;
+  font-weight: 500;
+}
+.order__placed > p,
+.order__total > p,
+.order__shipping > p {
+  font-size: 13px;
+  color: #565959;
+  font-weight: 600;
+}
+
+.order__id {
+  font-size: 14px;
+  color: #565959;
+  font-weight: 500;
+}
+
+.order__body {
+  padding: 30px;
+}
