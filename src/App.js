@@ -14,7 +14,10 @@ import Orders from "./Orders";
 import Register from "./Register";
 
 const promise = loadStripe(
-  "pk_test_51H7RRLBwnJCZRdYBmrQQMWmHvVdVwySG0MNLm3khJv17osJTk9UsN3UhaiqLlboDzarIS1R00fKpJoveYlxPNJ0c00XYnObzqo"
+  "pk_test_51H7RRLBwnJCZRdYBmrQQMWmHvVdVwySG0MNLm3khJv17osJTk9UsN3UhaiqLlboDzarIS1R00fKpJoveYlxPNJ0c00XYnObzqo",
+  {
+    locale: "en",
+  }
 );
 
 function App() {

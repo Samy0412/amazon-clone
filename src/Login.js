@@ -55,7 +55,10 @@ function Login() {
           interest-Based Ads notice.
         </p>
         <br></br>
-        <small>New to Amazon?</small>
+        <div className="new__customer">
+          <h5>New to Amazon?</h5>
+        </div>
+
         <button
           onClick={(e) => history.push("./register")}
           className="login__registerButton"

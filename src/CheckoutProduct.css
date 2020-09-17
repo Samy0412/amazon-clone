@@ -24,13 +24,21 @@
 }
 
 .checkoutProduct__info > button {
-  background: #febd69;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border-radius: 3px;
   border: 1px solid;
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
-  border-radius: 3px;
   color: #111;
   font-weight: 500;
+  font-size: 0.8em;
+  margin-top: 20px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.checkoutProduct__info > button:hover {
+  opacity: 1;
 }
 
 .checkoutProduct__title {

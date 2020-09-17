@@ -86,9 +86,10 @@ function Payment() {
       <div className="payment__header">
         <h2 className="payment__title">Review you order</h2>
         <br></br>
-        <p>
-          By placing your order, you agree to FAKE AMAZON CLONE's privacy notice
-          & conditions of use.
+        <p className="payment__notice">
+          By placing your order, you agree to FAKE AMAZON CLONE's{" "}
+          <span> privacy notice</span> and
+          <span> conditions of use.</span>
         </p>
       </div>
       <div className="payment__body">
@@ -97,6 +98,7 @@ function Payment() {
             <div className="payment__shipping">
               <div className="payment__shipping__title">
                 <strong>Shipping address</strong>
+                <span> Change</span>
               </div>
               <div className="payment__shipping__address">
                 <p>{user?.displayName}</p>
@@ -108,6 +110,7 @@ function Payment() {
             <div className="payment__billing">
               <div className="payment__shipping__title">
                 <strong>Billing address</strong>
+                <span> Change</span>
               </div>
               <div className="payment__shipping__address">
                 <p>{user?.displayName}</p>
@@ -179,7 +182,7 @@ function Payment() {
                 <tr>
                   <td>
                     <p className="payment__shipping__address">
-                      Shipping & handling:
+                      Shipping & Handling:
                     </p>
                   </td>
                   <td className="price">
