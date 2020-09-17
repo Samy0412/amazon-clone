@@ -8,6 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { getTotal } from "./reducer";
 import axios from "./axios";
 import { db } from "./firebase";
+import moment from "moment";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -82,27 +83,49 @@ function Payment() {
 
   return (
     <div className="payment">
-      <div className="payment__containter">
-        {/* delivery address */}
-        <h1>
-          Checkout (<Link to="./checkout">{basket.length} items</Link>)
-        </h1>
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Delivery address</h3>
-          </div>
+      <div className="payment__header">
+        <h2 className="payment__title">Review you order</h2>
+        <br></br>
+        <p>
+          By placing your order, you agree to FAKE AMAZON CLONE's privacy notice
+          & conditions of use.
+        </p>
+      </div>
+      <div className="payment__body">
+        <div className="payment__left">
           <div className="payment__address">
-            <p>{user?.displayName}</p>
-            <p>123 React lane</p>
-            <p>Los Angeles, CA</p>
-          </div>
-        </div>
-        {/* review items */}
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Review items and delivery</h3>
+            <div className="payment__shipping">
+              <div className="payment__shipping__title">
+                <strong>Shipping address</strong>
+              </div>
+              <div className="payment__shipping__address">
+                <p>{user?.displayName}</p>
+                <p>123 React lane</p>
+                <p>Los Angeles, CA</p>
+                <p>90015, USA</p>
+              </div>
+            </div>
+            <div className="payment__billing">
+              <div className="payment__shipping__title">
+                <strong>Billing address</strong>
+              </div>
+              <div className="payment__shipping__address">
+                <p>{user?.displayName}</p>
+                <p>123 React lane</p>
+                <p>Los Angeles, CA</p>
+                <p>90015, USA</p>
+              </div>
+            </div>
           </div>
           <div className="payment__items">
+            {basket.length ? (
+              <p className="delivery__date">
+                Delivery date :{" "}
+                {moment(Date.now() + 259200000).format("MMMM D. YYYY")}
+              </p>
+            ) : (
+              ""
+            )}
             {basket.map((item) => (
               <CheckoutProduct
                 id={item.id}
@@ -116,31 +139,74 @@ function Payment() {
           </div>
         </div>
 
-        {/* payment method */}
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Payment method</h3>
-          </div>
+        <div className="payment__right">
+          <strong className="payment__shipping__title">Payment method</strong>
           <div className="payment__details">
             {/* stripe magic */}
             <form onSubmit={handleSubmit}>
               <CardElement onChange={handleChange} />
-              <div className="payment__priceContainer">
-                <CurrencyFormat
-                  renderText={(value) => <h3>Order Total: {value}</h3>}
-                  decimalScale={2}
-                  value={getTotal(basket)}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"$"}
-                />
-                <button disabled={processing || disabled || succeeded}>
-                  <span>{processing ? <p>Processing</p> : "Buy Now"} </span>
-                </button>
-              </div>
+              <button disabled={processing || disabled || succeeded}>
+                <span>
+                  {processing ? <p>Processing</p> : "Place your order"}{" "}
+                </span>
+              </button>
               {/* Errors */}
               {error && <div>{error}</div>}
             </form>
+          </div>
+          <div className="payment__priceContainer">
+            <strong className="payment__shipping__title">Order summary</strong>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <p className="payment__shipping__address">Items:</p>
+                  </td>
+                  <td className="price">
+                    <CurrencyFormat
+                      className="payment__items__price"
+                      renderText={(value) => (
+                        <p className="payment__shipping__address">{value}</p>
+                      )}
+                      decimalScale={2}
+                      value={getTotal(basket)}
+                      displayType={"text"}
+                      thousandSeparator={true}
+                      prefix={"$"}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p className="payment__shipping__address">
+                      Shipping & handling:
+                    </p>
+                  </td>
+                  <td className="price">
+                    <p className="payment__shipping__address">
+                      {getTotal(basket) === 0 ? "$0" : "$4.03"}
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h3 className="payment__total">Order Total</h3>
+                  </td>
+                  <td className="price">
+                    <CurrencyFormat
+                      renderText={(value) => (
+                        <h3 className="payment__total">{value}</h3>
+                      )}
+                      decimalScale={2}
+                      value={getTotal(basket) && getTotal(basket) + 4.03}
+                      displayType={"text"}
+                      thousandSeparator={true}
+                      prefix={"$"}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
