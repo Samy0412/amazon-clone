@@ -144,13 +144,15 @@ function Payment() {
 
         <div className="payment__right">
           <strong className="payment__shipping__title">Payment method</strong>
+          <br/>
+          <small>For test purposes, use "4242 4242 4242 4242" as card number, "04/24" as expiration date, "242" as CVC and "42424" as ZIP.</small>
           <div className="payment__details">
             {/* stripe magic */}
             <form onSubmit={handleSubmit}>
               <CardElement onChange={handleChange} />
               <button disabled={processing || disabled || succeeded}>
                 <span>
-                  {processing ? <p>Processing</p> : "Place your order"}{" "}
+                  {processing ? <p>Processing...</p> : "Place your order"}{" "}
                 </span>
               </button>
               {/* Errors */}

@@ -10,12 +10,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
-  const [homeRedirect,setHomeRedirect]=useState(false);
 
-  if (homeRedirect) {
-    return (
-      <Redirect to="/" />);
-  }
 
   const register = (e) => {
     e.preventDefault();
@@ -30,9 +25,8 @@ function Register() {
           });
         }
         console.log("new user>>>", user);
-        setHomeRedirect(true);
+        history.replace("/");
       })
-      .then(()=> history.push("/"))
       .catch(function (error) {
         // Handle Errors here.
         let errorMessage = error.message;
