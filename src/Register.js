@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 import "./Login.css";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
@@ -10,6 +10,12 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userName, setUserName] = useState("");
+  const [homeRedirect,setHomeRedirect]=useState(false);
+
+  if (homeRedirect) {
+    return (
+      <Redirect to="/" />);
+  }
 
   const register = (e) => {
     e.preventDefault();
@@ -24,11 +30,11 @@ function Register() {
           });
         }
         console.log("new user>>>", user);
-        history.push("/");
+        setHomeRedirect(true);
       })
+      .then(()=> history.push("/"))
       .catch(function (error) {
         // Handle Errors here.
-        let errorCode = error.code;
         let errorMessage = error.message;
         alert(errorMessage);
       });

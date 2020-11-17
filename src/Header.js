@@ -3,17 +3,19 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 
 function Header() {
+  const history = useHistory();
   const [{ basket, user }, dispatch] = useStateValue();
 
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
     }
+    history.push("/");
   };
 
   return (
@@ -65,18 +67,22 @@ function Header() {
         </div>
       </div>
       <div className="under__header">
-        <div className="under__header__left">
+          {user && 
+          <div className="under__header__left">
           <div>
-            <LocationOnIcon />
+          <LocationOnIcon />
           </div>
           <div>
             <small>Deliver to {user?.displayName}</small>
             <p>Los Angeles, 90015</p>
           </div>
-        </div>
+          </div>
+          }
         <div>
           <ul className="under__header__middle">
-            <li>{user?.displayName}'s store</li>
+            {user && 
+             <li>{user?.displayName}'s store</li>
+            }
             <li>Best sellers</li>
             <li>Deals store</li>
             <li>Electronics</li>

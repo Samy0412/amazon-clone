@@ -8,7 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { getTotal } from "./reducer";
 
 function Checkout() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket}] = useStateValue();
   return (
     <div className="checkout">
       <div className="checkout__left">
