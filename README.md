@@ -14,5 +14,5 @@ You can view and use the app directly here: https://clone-34791.web.app/
 
 UI of the app: 
 
-!["Appointments"]()
+!["Appointments"](https://github.com/Samy0412/amazon-clone/blob/master/public/main-app.png?raw=true)
 
