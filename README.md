@@ -1,8 +1,8 @@
 # amazon-clone
 
-Amazon-clone A full stack amazon clone built with React js, React context API, authentication with firebase and payment gateway with stripe.
+Amazon-clone a full stack application built with React js, React context API, authentication with firebase and payment gateway with stripe.
 
-You can view and use the app directly here: 
+You can view and use the app directly here: clone-34791.web.app/
 
 ## Setup
 
@@ -14,5 +14,5 @@ You can view and use the app directly here:
 
 UI of the app: 
 
-!["Appointments"](https://github.com/Samy0412/spotify-clone/blob/main/public/main-app.png?raw=true)
+!["Appointments"]()
 
