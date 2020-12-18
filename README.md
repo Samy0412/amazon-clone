@@ -2,7 +2,7 @@
 
 Amazon-clone a full stack application built with React js, React context API, firebase and payment gateway with stripe.
 
-You can view and use the app directly here: clone-34791.web.app/
+You can view and use the app directly here: https://clone-34791.web.app/
 
 ## Setup
 
