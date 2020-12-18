@@ -1,8 +1,8 @@
 # amazon-clone
 
-Amazon-clone is a copy of a part of the UI of the Spotify web player. It is built with React, react context API and uses Spotify web API, material UI and Reactstrap.
+Amazon-clone A full stack amazon clone built with React js, React context API, authentication with firebase and payment gateway with stripe.
 
-You can view and use the app directly here: https://spotify-clone-sg.netlify.app
+You can view and use the app directly here: 
 
 ## Setup
 
