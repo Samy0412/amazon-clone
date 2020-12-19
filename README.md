@@ -23,12 +23,12 @@ Main page:
 
 Checkout page:
 
-!["Checkout page"] (https://github.com/Samy0412/amazon-clone/blob/master/public/Checkout-page.png?raw=true)
+!["Checkout page"](https://github.com/Samy0412/amazon-clone/blob/master/public/Checkout-page.png?raw=true)
 
 Review order:
 
-!["Checkout page"] (https://github.com/Samy0412/amazon-clone/blob/master/public/review-your-order.png?raw=true)
+!["Checkout page"](https://github.com/Samy0412/amazon-clone/blob/master/public/review-your-order.png?raw=true)
 
 Your past orders:
 
-!["past orders"] (https://github.com/Samy0412/amazon-clone/blob/master/public/your%20orders.png?raw=true)
+!["past orders"](https://github.com/Samy0412/amazon-clone/blob/master/public/your%20orders.png?raw=true)
