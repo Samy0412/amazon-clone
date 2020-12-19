@@ -10,6 +10,12 @@ You can view and use the app directly here: https://clone-34791.web.app/
 2. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm start` command. 
 
+## Stripe Testing
+
+Use Credit Card # 4242 4242 4242 4242 for testing success scenarios.
+
+More information in their docs: <https://stripe.com/docs/testing#cards>
+
 ## Final product
 
 UI of the app: 
