@@ -17,8 +17,18 @@ For testing success scenarios, use Credit Card # 4242 4242 4242 4242, with 04/24
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Final product
+Main page: 
 
-UI of the app: 
+!["main page"](https://github.com/Samy0412/amazon-clone/blob/master/public/main-app.png?raw=true)
 
-!["Appointments"](https://github.com/Samy0412/amazon-clone/blob/master/public/main-app.png?raw=true)
+Checkout page:
 
+!["Checkout page"] (https://github.com/Samy0412/amazon-clone/blob/master/public/Checkout-page.png?raw=true)
+
+Review order:
+
+!["Checkout page"] (https://github.com/Samy0412/amazon-clone/blob/master/public/review-your-order.png?raw=true)
+
+Your past orders:
+
+!["past orders"] (https://github.com/Samy0412/amazon-clone/blob/master/public/your%20orders.png?raw=true)
